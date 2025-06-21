@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Homepage</title>
+    <style>
+        html body {
+            background: #222233;
+            font-family: Verdana, Arial;
+            color: #AACCFF;
+        }
+        .container {
+            display: flex;
+            width: 90vw;
+            height: 90vh;
+        }
+        .left { width: 25%; padding: 10px; }
+        .middle { width: 50%; display: flex; justify-content: center; align-items: center; }
+        .right { width: 25%; padding: 10px; }
+        img { max-width: 70%; max-height: 70%; border: 2px solid white; }
+
+        #current-time, #wthr {
+            font-size: 2.5em;
+            padding-left: 0.5em;
+            margin-bottom: 2em;
+        }
+        #timezone-display{
+            font-size: 1.5em;
+            color:darkseagreen;
+            margin-bottom: 2em;
+            white-space: pre;
+        }
+        #guid-container{
+            font-size: 1.5em;
+            font-style: italic;
+            color:snow;
+            margin-top:3em;
+        }
+        #quote, #film {
+            font-size: 1.5em;
+            color:orange;
+            line-height: 1.8;
+            padding-right: 0.3em;
+        }
+        #film{
+            color: #222233;
+        }
+        h1{
+            padding: 20px;
+            color: white;
+            background-color: red;
+            font-size: 2.5em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="reminder">MAKE YOUR CHOICES IN THE EXTENSION OPTIONS PAGE (CUSTOM HOMEPAGE)</h1>
+    <div class="container">
+        <div class="left">
+            <div>
+                <span id="current-time"></span>
+                <p />
+                <span id="timezone-display"></span>
+            </div>
+            <div id="guid-container" title="GUID's are a mystery"></div>
+        </div>
+        <div class="middle">
+            <img id="random-image" src="">
+        </div>
+        <div class="right">
+            <div id="wthr"></div>
+            <div id="quote"></div>
+            <div>
+                :: <span title="select to see the movie" id="film"></span> ::
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
